@@ -13,7 +13,7 @@ import {
     View
 } from 'react-native';
 
-
+import myStyles from './styles.js'
 
 var textStyle = {
 
@@ -65,44 +65,6 @@ class ReactNativeOne extends Component {
         );
     }
 }
-
-// my styles , StyleSheet.create
-const myStyles = StyleSheet.create({
-
-  myTextStyles: {
-    width: 200,
-    height: 300,
-    fontSize: 20,
-    backgroundColor:'#BBBBBB',
-    color: 'green',
-    marginTop : 10,
-    padding: 20
-  },
-
-  myTextStyles2:{
-    width: 200,
-    height: 200,
-    fontSize: 20,
-    backgroundColor:'yellow',
-    color: 'green',
-    marginTop : 10,
-    padding: 20
-  },
-
-  myTextFonts:{
-    fontSize: 15
-  },
-
-  myTextColor:{
-    color: '#000000'
-  },
-
-  myTextBg:{
-    backgroundColor: '#DEDEDE'
-  },
-
-});
-
 
 
 const styles = StyleSheet.create({
