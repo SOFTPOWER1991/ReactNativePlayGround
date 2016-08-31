@@ -198,11 +198,10 @@ const styles = StyleSheet.create({
   otherLoginView:{
         width:screenWidth,
         position:'absolute',
-        bottom:20,
+        bottom:0,
         alignItems:'center',
         justifyContent:'center'
   }
-
 
 
 });
