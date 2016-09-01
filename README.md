@@ -26,4 +26,18 @@ React Native Play Ground for practice。
       </View>
 	```
 
+# FlexBox
+
+* flexDirection : row （android：horizontal）、column(android:vertical)
+
+	布局主轴，水平 or 垂直。
+	
+* justifyContent: flex-start, center, flex-end, space-around, and space-between.
+
+  view在主轴的排列方式
+  
+* alignItems: flex-start, center, flex-end, and stretch.
+
+  view在从轴的排列方式；
+
 

@@ -15,17 +15,17 @@ import {
 class BasicsDemo extends Component {
   render() {
     return (
-      // <View style={styles.container}>
-      //   <View style={{width:50, height:50,backgroundColor:'red'}}/>
-      //   <View style={{width:100, height:100,backgroundColor:'green'}}/>
-      //   <View style={{width:150, height:150,backgroundColor:'skyblue'}}/>
-      // </View>
+      <View style={styles.container}>
+        <View style={{width:50, height:50,backgroundColor:'red'}}/>
+        <View style={{width:100, height:100,backgroundColor:'green'}}/>
+        <View style={{width:150, height:150,backgroundColor:'skyblue'}}/>
+      </View>
 
-        <View style={{flex:1}}>
-          <View style={{flex:1,backgroundColor:'red'}}/>
-          <View style={{flex: 2,backgroundColor:'green'}}/>
-          <View style={{flex:2,backgroundColor:'skyblue'}}/>
-        </View>
+        // <View style={{flex:1 , flexDirection: 'column' }}>
+        //   <View style={{flex:1,backgroundColor:'red'}}/>
+        //   <View style={{flex: 2,backgroundColor:'green'}}/>
+        //   <View style={{flex:2,backgroundColor:'skyblue'}}/>
+        // </View>
     );
   }
 }
@@ -33,7 +33,10 @@ class BasicsDemo extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f4f4f4'
+    backgroundColor: '#f4f4f4',
+      flexDirection: 'row',
+      justifyContent:'space-between',
+      alignItems : 'center'
   }
 });
 
