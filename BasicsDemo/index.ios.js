@@ -12,6 +12,7 @@ import {
   TextInput,
     ScrollView,
     Image,
+    ListView,
   View
 } from 'react-native';
 
@@ -21,6 +22,13 @@ class BasicsDemo extends Component {
     constructor(props) {
         super(props);
         this.state = {text: ''};
+
+        const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+        this.state = {
+            dataSource: ds.cloneWithRows([
+                'John', 'Joel', 'James', 'Jimmy', 'Jackson', 'Jillian', 'Julie', 'Devin'
+            ])
+        };
     }
 
   render() {
@@ -59,67 +67,73 @@ class BasicsDemo extends Component {
         //
         // </View>
 
-        // {/*<View style={styles.container}>*/}
-        <ScrollView contentContainerStyle={styles.container}>
-            <Text style={{fontSize:15}}>Scroll me plz</Text>
-            <Image
-                style={styles.imgStyle}
-                source={require('./img/favicon.png')} />
-            <Image
-                style={styles.imgStyle}
-                source={require('./img/favicon.png')} />
-            <Image
-                style={styles.imgStyle}
-                source={require('./img/favicon.png')} />
-            <Image
-                style={styles.imgStyle}
-                source={require('./img/favicon.png')} />
-            <Image
-                style={styles.imgStyle}
-                source={require('./img/favicon.png')} />
-            <Text style={{fontSize:15}}>If you like</Text>
-            <Image
-                style={styles.imgStyle}
-                source={require('./img/favicon.png')} />
-            <Image
-                style={styles.imgStyle}
-                source={require('./img/favicon.png')} />
-            <Image
-                style={styles.imgStyle}
-                source={require('./img/favicon.png')} />
-            <Image
-                style={styles.imgStyle}
-                source={require('./img/favicon.png')} />
-            <Image
-                style={styles.imgStyle}
-                source={require('./img/favicon.png')} />
-            <Text style={{fontSize:15}}>Scrolling down</Text>
-            <Image
-                style={styles.imgStyle}
-                source={require('./img/favicon.png')} />
-            <Image
-                style={styles.imgStyle}
-                source={require('./img/favicon.png')} />
-            <Image
-                style={styles.imgStyle}
-                source={require('./img/favicon.png')} />
-            <Image
-                style={styles.imgStyle}
-                source={require('./img/favicon.png')} />
-            <Image
-                style={styles.imgStyle}
-                source={require('./img/favicon.png')} />
-        </ScrollView>
 
-        // </View>
+        // <ScrollView
+        //     contentContainerStyle={styles.container}>
+        //     <Text style={{fontSize:15}}>Scroll me plz</Text>
+        //     <Image
+        //         style={styles.imgStyle}
+        //         source={require('./img/favicon.png')} />
+        //     <Image
+        //         style={styles.imgStyle}
+        //         source={require('./img/favicon.png')} />
+        //     <Image
+        //         style={styles.imgStyle}
+        //         source={require('./img/favicon.png')} />
+        //     <Image
+        //         style={styles.imgStyle}
+        //         source={require('./img/favicon.png')} />
+        //     <Image
+        //         style={styles.imgStyle}
+        //         source={require('./img/favicon.png')} />
+        //     <Text style={{fontSize:15}}>If you like</Text>
+        //     <Image
+        //         style={styles.imgStyle}
+        //         source={require('./img/favicon.png')} />
+        //     <Image
+        //         style={styles.imgStyle}
+        //         source={require('./img/favicon.png')} />
+        //     <Image
+        //         style={styles.imgStyle}
+        //         source={require('./img/favicon.png')} />
+        //     <Image
+        //         style={styles.imgStyle}
+        //         source={require('./img/favicon.png')} />
+        //     <Image
+        //         style={styles.imgStyle}
+        //         source={require('./img/favicon.png')} />
+        //     <Text style={{fontSize:15}}>Scrolling down</Text>
+        //     <Image
+        //         style={styles.imgStyle}
+        //         source={require('./img/favicon.png')} />
+        //     <Image
+        //         style={styles.imgStyle}
+        //         source={require('./img/favicon.png')} />
+        //     <Image
+        //         style={styles.imgStyle}
+        //         source={require('./img/favicon.png')} />
+        //     <Image
+        //         style={styles.imgStyle}
+        //         source={require('./img/favicon.png')} />
+        //     <Image
+        //         style={styles.imgStyle}
+        //         source={require('./img/favicon.png')} />
+        // </ScrollView>
 
+
+        <View style={{paddingTop: 22}}>
+            <ListView
+                dataSource={this.state.dataSource}
+                renderRow={(rowData) => <Text>{rowData}</Text>}
+            />
+        </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+
     backgroundColor: '#f4f4f4',
       flexDirection: 'column',
       alignItems:'center',
@@ -141,8 +155,8 @@ const styles = StyleSheet.create({
     },
 
     imgStyle:{
-        width: 50,
-        height: 50,
+        width: 300,
+        height: 300,
         backgroundColor: 'transparent',
         margin: 10,
     }

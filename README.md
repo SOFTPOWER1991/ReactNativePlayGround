@@ -60,6 +60,12 @@ React Native Play Ground for practice。
                 {this.state.text.split(' ').map((word) => word && '🍕').join(' ')}
             </Text>
 ```
+
+# ScrollView
+
+style 要使用：contentContainerStyle；
+
+
   
 
 
