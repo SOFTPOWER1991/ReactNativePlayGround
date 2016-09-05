@@ -59,8 +59,59 @@ class BasicsDemo extends Component {
         //
         // </View>
 
+        // {/*<View style={styles.container}>*/}
+        <ScrollView contentContainerStyle={styles.container}>
+            <Text style={{fontSize:15}}>Scroll me plz</Text>
+            <Image
+                style={styles.imgStyle}
+                source={require('./img/favicon.png')} />
+            <Image
+                style={styles.imgStyle}
+                source={require('./img/favicon.png')} />
+            <Image
+                style={styles.imgStyle}
+                source={require('./img/favicon.png')} />
+            <Image
+                style={styles.imgStyle}
+                source={require('./img/favicon.png')} />
+            <Image
+                style={styles.imgStyle}
+                source={require('./img/favicon.png')} />
+            <Text style={{fontSize:15}}>If you like</Text>
+            <Image
+                style={styles.imgStyle}
+                source={require('./img/favicon.png')} />
+            <Image
+                style={styles.imgStyle}
+                source={require('./img/favicon.png')} />
+            <Image
+                style={styles.imgStyle}
+                source={require('./img/favicon.png')} />
+            <Image
+                style={styles.imgStyle}
+                source={require('./img/favicon.png')} />
+            <Image
+                style={styles.imgStyle}
+                source={require('./img/favicon.png')} />
+            <Text style={{fontSize:15}}>Scrolling down</Text>
+            <Image
+                style={styles.imgStyle}
+                source={require('./img/favicon.png')} />
+            <Image
+                style={styles.imgStyle}
+                source={require('./img/favicon.png')} />
+            <Image
+                style={styles.imgStyle}
+                source={require('./img/favicon.png')} />
+            <Image
+                style={styles.imgStyle}
+                source={require('./img/favicon.png')} />
+            <Image
+                style={styles.imgStyle}
+                source={require('./img/favicon.png')} />
+        </ScrollView>
 
-        
+        // </View>
 
     );
   }
@@ -71,8 +122,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#f4f4f4',
       flexDirection: 'column',
-      justifyContent:'center',
-      alignItems : 'center'
+      alignItems:'center',
+
   },
 
     textInputStyle:{
@@ -87,6 +138,13 @@ const styles = StyleSheet.create({
         paddingLeft:10,
         borderBottomColor:'blue',
 
+    },
+
+    imgStyle:{
+        width: 50,
+        height: 50,
+        backgroundColor: 'transparent',
+        margin: 10,
     }
 });
 
