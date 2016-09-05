@@ -39,5 +39,27 @@ React Native Play Ground for practice。
 * alignItems: flex-start, center, flex-end, and stretch.
 
   view在从轴的排列方式；
+  
+# TextInput : 允许用户输入文本的组件
+
+```
+ <TextInput
+                style={styles.textInputStyle}
+
+                placeholder={"Plase Input Text Here"}
+
+                autoCapitalize = 'characters'
+
+                multiline = {true}
+
+                numberOfLines = {3}
+
+                onChangeText = { (text) => this.setState({text})}/>
+
+            <Text style={{padding: 10, fontSize: 42}}>
+                {this.state.text.split(' ').map((word) => word && '🍕').join(' ')}
+            </Text>
+```
+  
 
 
