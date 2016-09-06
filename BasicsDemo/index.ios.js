@@ -16,6 +16,7 @@ import {
   View
 } from 'react-native';
 
+import MyScene from './MyScene';
 
 class BasicsDemo extends Component {
 
@@ -34,7 +35,7 @@ class BasicsDemo extends Component {
   render() {
     return (
       // <View style={styles.container}>
-      //   <View style={{width:50, height:50,backgroundColor:'red'}}/>
+      //   <View style={{width:50, height:50,backgroundColor:'red' , position : 'absolute' , top: 50}}/>
       //   <View style={{width:100, height:100,backgroundColor:'green'}}/>
       //   <View style={{width:150, height:150,backgroundColor:'skyblue'}}/>
       // </View>
@@ -121,12 +122,39 @@ class BasicsDemo extends Component {
         // </ScrollView>
 
 
-        <View style={{paddingTop: 22}}>
-            <ListView
-                dataSource={this.state.dataSource}
-                renderRow={(rowData) => <Text>{rowData}</Text>}
-            />
-        </View>
+        // <View style={{paddingTop: 22}}>
+        //     <ListView
+        //         dataSource={this.state.dataSource}
+        //         renderRow={(rowData) => <Text>{rowData}</Text>}
+        //     />
+        // </View>
+
+
+        // <View style={styles.container}>
+        //     <Text style={styles.textStyle0}>
+        //         1
+        //     </Text>
+        //     <Text style={styles.textStyle1}>
+        //         2
+        //     </Text>
+        //     <Text style={styles.textStyle2}>
+        //         3
+        //     </Text>
+        //     <Text style={styles.textStyle3}>
+        //         4
+        //     </Text>
+        //     <Text style={styles.textStyle4}>
+        //         5
+        //     </Text>
+        //
+        // </View>
+
+        <Navigator
+            initialRoute={{ title: 'My Initial Scene', index: 0 }}
+            renderScene={(route, navigator) => {
+        return <MyScene title={route.title} />
+      }}
+        />
     );
   }
 }
@@ -135,8 +163,8 @@ const styles = StyleSheet.create({
   container: {
 
     backgroundColor: '#f4f4f4',
-      flexDirection: 'column',
-      alignItems:'center',
+      flex: 1,
+      flexDirection: 'column'
 
   },
 
@@ -159,7 +187,39 @@ const styles = StyleSheet.create({
         height: 300,
         backgroundColor: 'transparent',
         margin: 10,
-    }
+    },
+
+    textStyle0:{
+        flex:1,
+        backgroundColor: 'blue',
+        color: "white",
+        textAlign: 'center'
+    },
+
+    textStyle1:{
+        flex:1,
+        backgroundColor: 'green',
+        color: "white"
+    },
+
+    textStyle2:{
+        flex:1,
+        backgroundColor: '#f4f4f4',
+        color: "white"
+    },
+
+    textStyle3:{
+        flex:1,
+        backgroundColor: 'yellow',
+        color: "white"
+    },
+
+    textStyle4:{
+        flex:1,
+        backgroundColor: 'gray',
+        color: "white"
+    },
+
 });
 
 AppRegistry.registerComponent('BasicsDemo', () => BasicsDemo);
