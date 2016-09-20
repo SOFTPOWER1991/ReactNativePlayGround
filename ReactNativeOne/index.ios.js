@@ -17,7 +17,7 @@ import myStyles from './styles.js'
 
 var textStyle = {
 
-    fontSize: 14,
+    fontSize: 50,
     color: 'white',
     backgroundColor: '#232323',
     padding: 10,
@@ -42,23 +42,23 @@ class ReactNativeOne extends Component {
             // </View>
             < View style = {
                 {
-                    width: 200,
+                    width: 500,
                     height: 500,
                     backgroundColor: 'red',
                     marginTop: 200,
                     marginLeft: 100,
                     padding: 10
                 }
-            } > 
-            
+            } >
 
-             <Text style = {[myStyles.myTextFonts, myStyles.myTextColor, myStyles.myTextBg]} > 
-            Hello, React Native! 
-            < /Text>  
 
-             <Text style = {[myStyles.myTextFonts, myStyles.myTextColor, myStyles.myTextBg , {backgroundColor: 'green'}]} > 
-              React Native : Learn once , write anywhere! 
-            < /Text>  
+             <Text style = {[myStyles.myTextFonts, myStyles.myTextColor, myStyles.myTextBg]} >
+            Hello, React Native!
+            < /Text>
+
+             <Text style = {[myStyles.myTextFonts, myStyles.myTextColor, myStyles.myTextBg , {backgroundColor: 'green'}]} >
+              React Native : Learn once , write anywhere!
+            < /Text>
 
 
             </View>

@@ -13,7 +13,7 @@ const myStyles = StyleSheet.create({
     myTextStyles: {
         width: 200,
         height: 300,
-        fontSize: 20,
+        fontSize: 40,
         backgroundColor: '#BBBBBB',
         color: 'green',
         marginTop: 10,
@@ -22,14 +22,14 @@ const myStyles = StyleSheet.create({
     myTextStyles2: {
         width: 200,
         height: 200,
-        fontSize: 20,
+        fontSize: 40,
         backgroundColor: 'yellow',
         color: 'green',
         marginTop: 10,
         padding: 20
     },
     myTextFonts: {
-        fontSize: 15
+        fontSize: 5
     },
     myTextColor: {
         color: '#000000'
