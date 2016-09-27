@@ -9,7 +9,8 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  PixelRatio
 } from 'react-native';
 
 class day01 extends Component {
@@ -19,73 +20,105 @@ class day01 extends Component {
     console.log('11111');
     return (
       <View style={styles.container}>
-            <View style={[styles.view , {height: 150} ]}>
-            </View>
+            <View style={styles.myView}>
 
+              <View style={[styles.view1, styles.flex , styles.rightLine] }>
+                <Text  style={styles.textStyle}>
+                  酒店
+                </Text>
+              </View>
 
-            <View style={ {width: 90 , height: 100 , alignSelf: 'flex-start' , backgroundColor: 'red'}}>
-            </View>
+              <View style={[styles.view2 ,  styles.rightLine]}>
 
-            <View style={[styles.view , {height: 200}]}>
-            </View>
+                <View style={[styles.flex , styles.bottomLine] }>
+                  <Text  style={styles.textStyle}>
+                    海外酒店
+                  </Text>
+                </View>
+                <View style={[styles.flex ] }>
+                  <Text  style={styles.textStyle}>
+                    特惠酒店
+                  </Text>
+                </View>
+              </View>
 
-            <View style={[styles.view , {height: 400}]}>
+              <View style={styles.view3}>
+                <View style={[styles.viewflex ,  styles.bottomLine] }>
+                  <Text  style={styles.textStyle}>
+                    团购
+                  </Text>
+                </View>
+                <View style={[styles.viewflex ] }>
+                  <Text  style={styles.textStyle}>
+                    客栈公寓
+                  </Text>
+                </View>
+              </View>
             </View>
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'green',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    alignItems: 'stretch'
-  },
-  view:{
-    backgroundColor: 'white',
-    width:50,
 
-    margin: 10
+const styles = StyleSheet.create({
+  container:{
+    flex : 1,
+    backgroundColor:'#f4f4f4'
   },
+
+  flex: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+
+  viewflex: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+
+  textStyle: {
+    textAlign: 'center',
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold'
+  },
+
+  myView:{
+    position:'absolute',
+    height:84,
+    top:35,
+    left:5,
+    right: 5,
+    flexDirection: 'row',
+    backgroundColor:'black',
+    borderRadius: 5
+  },
+
   view1:{
-    width: 100,
-    height: 100,
-    backgroundColor:'blue',
-    position: 'relative',
-    left: 30,
-    top: 30
+    flex:1,
+
   },
   view2:{
-    width: 100,
-    height: 100,
-    backgroundColor:'blue',
-    position: 'absolute',
-    right: 30,
-    top: 30
+    flex:1,
+
   },
   view3:{
-    width: 100,
-    height: 100,
-    backgroundColor:'white',
-    position: 'absolute',
-    left: 30,
-    bottom: 30
+    flex:1,
+
   },
-  view4:{
-    width: 100,
-    height: 100,
-    backgroundColor:'blue',
-    position: 'absolute',
-    right: 30,
-    bottom: 30
+  rightLine:{
+    borderRightColor:'white',
+    borderRightWidth : 1 / PixelRatio.get()
   },
-  item:{
-    flex:1
-  },
+
+  bottomLine:{
+    borderBottomColor:'white',
+    borderBottomWidth : 1 / PixelRatio.get()
+  }
+
 });
 
 AppRegistry.registerComponent('day01', () => day01);

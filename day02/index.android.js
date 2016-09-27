@@ -1,7 +1,7 @@
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
- * @flow
+ * @zhanggeng
  */
 
 import React, { Component } from 'react';
@@ -9,45 +9,115 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  PixelRatio
 } from 'react-native';
 
 class day01 extends Component {
+
   render() {
+
+    console.log('11111');
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Hello React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
+            <View style={styles.myView}>
+
+              <View style={[styles.view1, styles.flex , styles.rightLine] }>
+                <Text  style={styles.textStyle}>
+                  酒店
+                </Text>
+              </View>
+
+              <View style={[styles.view2 ,  styles.rightLine]}>
+
+                <View style={[styles.flex , styles.bottomLine] }>
+                  <Text  style={styles.textStyle}>
+                    海外酒店
+                  </Text>
+                </View>
+                <View style={[styles.flex ] }>
+                  <Text  style={styles.textStyle}>
+                    特惠酒店
+                  </Text>
+                </View>
+              </View>
+
+              <View style={styles.view3}>
+                <View style={[styles.viewflex ,  styles.bottomLine] }>
+                  <Text  style={styles.textStyle}>
+                    团购
+                  </Text>
+                </View>
+                <View style={[styles.viewflex ] }>
+                  <Text  style={styles.textStyle}>
+                    客栈公寓
+                  </Text>
+                </View>
+              </View>
+            </View>
       </View>
     );
   }
 }
 
+
 const styles = StyleSheet.create({
-  container: {
+  container:{
+    flex : 1,
+    backgroundColor:'#f4f4f4'
+  },
+
+  flex: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    alignItems: 'center'
   },
-  welcome: {
-    fontSize: 20,
+
+  viewflex: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+
+  textStyle: {
     textAlign: 'center',
-    margin: 10,
+    color: 'white',
+    fontSize: 16
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+
+  myView:{
+    position:'absolute',
+    height:84,
+    top:35,
+    left:5,
+    right: 5,
+    flexDirection: 'row',
+    backgroundColor:'black',
+    borderRadius: 5
   },
+
+  view1:{
+    flex:1,
+
+  },
+  view2:{
+    flex:1,
+
+  },
+  view3:{
+    flex:1,
+
+  },
+  rightLine:{
+    borderRightColor:'white',
+    borderRightWidth : 1 / PixelRatio.get()
+  },
+
+  bottomLine:{
+    borderBottomColor:'white',
+    borderBottomWidth : 1 / PixelRatio.get()
+  }
+
 });
 
 AppRegistry.registerComponent('day01', () => day01);

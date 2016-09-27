@@ -54,11 +54,11 @@ class ReactNativeOne extends Component {
 
              <Text style = {[myStyles.myTextFonts, myStyles.myTextColor, myStyles.myTextBg]} >
             Hello, React Native!
-            < /Text>
+            </Text>
 
              <Text style = {[myStyles.myTextFonts, myStyles.myTextColor, myStyles.myTextBg , {backgroundColor: 'green'}]} >
               React Native : Learn once , write anywhere!
-            < /Text>
+            </Text>
 
 
             </View>
