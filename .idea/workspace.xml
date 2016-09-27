@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be2f2e9e-f268-4692-81a6-cd07bb40f562" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ReactNativeRoot.iml" afterPath="$PROJECT_DIR$/.idea/ReactNativeRoot.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReactNativeOne/index.ios.js" afterPath="$PROJECT_DIR$/ReactNativeOne/index.ios.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day02/index.android.js" afterPath="$PROJECT_DIR$/day02/index.android.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day02/index.ios.js" afterPath="$PROJECT_DIR$/day02/index.ios.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
     </list>
     <ignored path="ReactNativeRoot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -162,9 +157,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
-    <property name="JavaScriptPreferStrict" value="false" />
-    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="JavaScriptPreferStrict" value="true" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="false" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$USER_HOME$/30-days-of-react-native" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -255,12 +250,12 @@
       <workItem from="1474014634136" duration="1311000" />
       <workItem from="1474205060303" duration="5000" />
       <workItem from="1474685675287" duration="487000" />
-      <workItem from="1474940541158" duration="395000" />
+      <workItem from="1474940541158" duration="854000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16447000" />
+    <option name="totallyTimeSpent" value="16906000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
