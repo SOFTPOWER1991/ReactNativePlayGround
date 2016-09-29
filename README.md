@@ -65,6 +65,19 @@ React Native Play Ground for practice。
 
 style 要使用：contentContainerStyle；
 
+# index.ios.js 导入
+
+```
+import React, { Component } from 'react';
+
+import {
+  AppRegistry,
+  StyleSheet,
+  Text,
+  View
+} from 'react-native';
+```
+
 
   
 
