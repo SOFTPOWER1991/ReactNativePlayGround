@@ -12,20 +12,22 @@ import {
   View
 } from 'react-native';
 
+
+class Header extends  Component{
+  render(){
+    return(
+        <View style={{width: 200  , height : 300 , backgroundColor: 'red'}}>
+
+        </View>
+    )
+  }
+}
+
 class WYNews extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
+        <Header/>
       </View>
     );
   }
@@ -36,7 +38,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'green',
   },
   welcome: {
     fontSize: 20,
