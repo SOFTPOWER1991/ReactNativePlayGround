@@ -4,7 +4,6 @@
 
 import React, { Component } from 'react';
 import {
-    AppRegistry,
     StyleSheet,
     Text,
     View
@@ -18,7 +17,7 @@ const styles = StyleSheet.create({
 
     Header: {
         width : screenW,
-        height : 60,
+        height : 45,
         backgroundColor: 'white',
         borderBottomWidth: 1,
         borderBottomColor: 'red',
@@ -28,10 +27,12 @@ const styles = StyleSheet.create({
     } ,
 
     base:{
-        fontSize: 20,
+        fontSize: 16,
         fontWeight: 'bold',
-        marginTop: 20
-    }
+        marginTop: 5
+    } ,
+
+
 
 }
 );
@@ -39,9 +40,9 @@ class Header extends  Component{
     render(){
         return(
             <View style={styles.Header}>
-                <Text style={[styles.base]}>网易</Text>
-                <Text style={[styles.base]}>新闻</Text>
-                <Text style={[styles.base]}>有态度</Text>
+                <Text style={[styles.base , {color: 'red'}]}>网易</Text>
+                <Text style={[styles.base , {color: 'white' , backgroundColor: 'red'}]}>新闻</Text>
+                <Text style={[styles.base , styles.ytd]}>有态度</Text>
             </View>
         )
     }
